@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  html-to-png:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: html-to-png-tool
+    restart: unless-stopped
