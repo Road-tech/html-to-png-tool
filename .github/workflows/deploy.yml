@@ -15,14 +15,21 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: 'npm'
+          node-version: 20
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
       - name: Build project
         run: npm run build
+
+      - name: Copy redirects and headers
+        run: |
+          cp public/_redirects dist/
+          cp public/_headers dist/
+
+      - name: List dist files
+        run: ls -la dist/
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
