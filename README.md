@@ -45,17 +45,6 @@ docker-compose up -d --build
 
 ### Cloudflare Pages 部署
 
-#### 方式一：GitHub Actions 自动部署（推荐）
-
-1. 将代码推送到 GitHub 仓库
-2. 在 Cloudflare Dashboard 中创建 Pages 项目
-3. 在 GitHub Secrets 中配置：
-   - `CLOUDFLARE_API_TOKEN`：Cloudflare API Token
-   - `CLOUDFLARE_ACCOUNT_ID`：Cloudflare Account ID
-4. 推送代码到 `main` 分支，GitHub Actions 会自动部署
-
-#### 方式二：手动上传部署
-
 1. 构建项目：`npm run build`
 2. 将 `dist` 目录打包为 ZIP 文件
 3. 在 Cloudflare Pages 中上传 ZIP 文件
