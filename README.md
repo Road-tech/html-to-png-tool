@@ -2,6 +2,8 @@
 
 一个网页工具，用户上传包含HTML文件和图片的压缩包，自动加载HTML并转换为适配微信公众号的PNG长图。
 
+试用Demo：[html2png.malu.tech](https://html2png.malu.tech/)
+
 ## 功能特性
 
 - 📤 **支持上传压缩包**：支持 `.zip` 格式，包含 HTML 和图片文件
